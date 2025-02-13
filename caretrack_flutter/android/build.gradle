@@ -1,0 +1,50 @@
+buildscript {
+    ext.kotlin_version = '1.8.22'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.10'
+    }
+}
+
+// PLUGINS BLOCK MUST COME IMMEDIATELY AFTER buildscript
+plugins {
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+    id 'com.android.application' version '8.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.22' apply false
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+// Define your API key or other sensitive values here
+def myApiKey = project.findProperty('MY_API_KEY') ?: ""
+
+android {
+    // Example configuration using the API key
+    defaultConfig {
+        // Other configurations...
+        buildConfigField "String", "GOOGLE_MAPS_API_KEY", "\"${myApiKey}\""
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "654319934141",
+    "project_id": "caretrack-bceb9",
+    "storage_bucket": "caretrack-bceb9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654319934141:android:821c366aed6aa17772b5d4",
+        "android_client_info": {
+          "package_name": "com.example.caretrack_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmKG4-XBUC5LsOfM71eSJU1N-XWgmo4V4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
