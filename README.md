@@ -1,6 +1,6 @@
 # 📱 Caretrack System - Flutter & Laravel API Setup Guide
 
-![Caretrack Logo](assets/logo.png)
+![Caretrack Logo](caretrack_flutter/assets/logo.png)
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.6-blue?logo=flutter)](https://flutter.dev) [![Laravel](https://img.shields.io/badge/Laravel-10-red?logo=laravel)](https://laravel.com) [![API](https://img.shields.io/badge/API-RESTful-blue)](https://developer.mozilla.org/en-US/docs/Glossary/REST) [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
